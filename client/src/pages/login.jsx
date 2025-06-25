@@ -16,7 +16,7 @@ export default function Login() {
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Passwords"
             className="w-full p-3 rounded-lg border-2 border-black bg-retroOrange placeholder-black text-black shadow-[2px_2px_0px_#000]"
           />
 
