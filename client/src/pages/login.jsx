@@ -1,42 +1,40 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Login = () => {
+export default function Login() {
   return (
-    <div className="min-h-screen bg-[#fceaff] flex justify-center items-center font-mono">
-      <div className="bg-[#fff1e6] border-[4px] border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-8 w-80">
-        <h2 className="text-2xl font-bold text-center text-[#ff5e5b] mb-6">Welcome Back!</h2>
-        <form>
-          <label className="block text-sm mb-2 text-black">Email</label>
+    <div className="min-h-screen bg-retroCream flex justify-center items-center font-retro text-[#1e1e1e]">
+      <div className="bg-white border-[4px] border-black px-10 py-8 rounded-xl shadow-[4px_4px_0px_#000] text-center w-[90%] max-w-md">
+        <h1 className="text-retroOrange text-4xl mb-2 tracking-wide">Split Bill</h1>
+        <h2 className="text-3xl text-black mb-6">Log in</h2>
+
+        <form className="space-y-5">
           <input
             type="email"
-            className="w-full mb-4 px-3 py-2 border-[2px] border-black rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-[#ff5e5b]"
-            placeholder="you@example.com"
+            placeholder="Email"
+            className="w-full p-3 rounded-lg border-2 border-black bg-retroOrange placeholder-black text-black shadow-[2px_2px_0px_#000]"
           />
-
-          <label className="block text-sm mb-2 text-black">Password</label>
           <input
             type="password"
-            className="w-full mb-6 px-3 py-2 border-[2px] border-black rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-[#ff5e5b]"
-            placeholder="••••••••"
+            placeholder="Password"
+            className="w-full p-3 rounded-lg border-2 border-black bg-retroOrange placeholder-black text-black shadow-[2px_2px_0px_#000]"
           />
 
           <button
             type="submit"
-            className="w-full bg-[#ff5e5b] text-white font-semibold py-2 px-4 border-[2px] border-black rounded-md hover:bg-[#e94e4b] transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+            className="w-full py-3 bg-retroTeal text-black font-bold rounded-lg border-2 border-black shadow-[2px_2px_0px_#000] hover:brightness-95"
           >
-            Login
+            LOG IN
           </button>
         </form>
-        <p className="mt-4 text-sm text-center text-gray-600">
-  Don&apos;t have an account?{' '}
-  <Link to="/signup" className="text-[#ff5e5b] underline">
-    Sign up
-  </Link>
-</p>
+
+        <p className="text-sm mt-6 text-black">
+          Don’t have an account?{" "}
+          <Link to="/signup" className="text-retroOrange underline">
+            Sign up
+          </Link>
+        </p>
       </div>
     </div>
   );
-};
-
-export default Login;
+}
